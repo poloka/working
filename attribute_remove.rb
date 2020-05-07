@@ -15,3 +15,10 @@ Config.respond_to? :verbose
 Config.configure! verbose: true
 Config.respond_to? :verbose
 puts Config.verbose
+
+# remove def verbose???
+Config.respond_to? :verbose # want to return false
+Config.configure! verbose: false
+Config.respond_to? :verbose
+puts Config.verbose
+
